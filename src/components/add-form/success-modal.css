@@ -1,0 +1,67 @@
+.ReactModal__Content {
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+  border: none !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-inner label {
+  font-size: 24px;
+  color: #001f3f;
+  margin-bottom: 20px;
+}
+
+.added-image {
+  height: 360px;
+  margin: 20px 0;
+}
+
+.take-home-button {
+  border: 2px solid rgba(113, 204, 202, 0.5);
+  padding: 8px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.take-home-button:hover {
+  background: rgba(113, 204, 202, 0.2);
+}
+
+.take-home-button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  color: #71ccca;
+}
+
+@media only screen and (max-width: 1024px) {
+  .added-image {
+    height: 320px;
+  }
+  .modal-inner label {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .added-image {
+    height: 240px;
+  }
+  .modal-inner label {
+    font-size: 18px;
+  }
+}

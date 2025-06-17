@@ -1,0 +1,84 @@
+.header-container {
+  width: 50%;
+  margin: auto;
+  padding-top: 34px; /* Added padding at the top */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 24px 12px 12px 12px; /* Increased top margin from 6px to 24px */
+  background: rgba(255, 255, 255, 0.85);
+  padding: 12px 24px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.watcher-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+.header-logo img {
+  height: 32px;
+  width: 32px;
+  margin-right: 12px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header-logo i {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+}
+
+.header-button {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 0px 8px;
+}
+
+.header-button i {
+  margin-right: 4px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .header-container {
+    width: 90%;
+  }
+  .header-logo {
+    font-size: 28px;
+  }
+  .header-button {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .header-container {
+    width: 100%;
+  }
+  .header-logo {
+    font-size: 24px;
+  }
+  .header-button {
+    font-size: 16px;
+  }
+}

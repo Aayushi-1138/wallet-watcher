@@ -1,0 +1,110 @@
+.topfold {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 12px; /* Increased top margin from 6px to 24px */
+  padding: 12px 24px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.home-topfold {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 8px 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.searchbar input {
+  width: 80%;
+  outline: none;
+  padding: 8px 0px;
+  border: none;
+  margin-left: 6px;
+  background-color: transparent;
+  color: #001f3f;
+}
+
+.searchbar i {
+  display: flex;
+  align-items: center;
+  margin-left: 6px;
+  color: #71ccca;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(113, 204, 202, 0.5);
+  font-size: 20px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.add-button:hover {
+  background: rgba(113, 204, 202, 0.2);
+}
+
+.add-button i {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  color: #71ccca;
+}
+
+.add-topfold {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.add-topfold-button {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.add-topfold-button:hover {
+  background: rgba(113, 204, 202, 0.2);
+}
+
+.add-topfold-button i {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  color: #71ccca;
+}
+
+@media only screen and (max-width: 1024px) {
+  .add-button {
+    font-size: 18px;
+  }
+  .searchbar {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .add-button {
+    font-size: 16px;
+  }
+}

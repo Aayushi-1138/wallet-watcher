@@ -1,0 +1,86 @@
+.expense-list {
+  margin: 6px 12px;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.expense-list-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.expense-list-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.expense-right {
+  position: sticky;
+  top: 24px;
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-column: span 2;
+}
+
+.empty-image {
+  height: 360px;
+}
+
+.total-expense {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.total-expense h3 {
+  color: #001f3f;
+  margin: 0;
+}
+
+.expense-chart {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.expense-chart h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #001f3f;
+}
+
+@media only screen and (max-width: 1024px) {
+  .expense-list-content {
+    grid-template-columns: 1fr;
+  }
+
+  .empty-state {
+    grid-column: span 1;
+  }
+
+  .empty-image {
+    height: 320px;
+  }
+}
+
+@media only screen and (max-width: 512px) {
+  .empty-image {
+    height: 240px;
+  }
+}
