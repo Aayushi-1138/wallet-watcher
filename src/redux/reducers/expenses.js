@@ -2,6 +2,7 @@ import {
   ADD_EXPENSE,
   DELETE_EXPENSE,
   SEARCH_EXPENSE,
+  EDIT_EXPENSE,
 } from "../action-types/expenses";
 
 const initialList = () => {
@@ -34,6 +35,17 @@ export const expenseReducer = (state = initialState, action) => {
       const { data } = action;
       const updatedList = state.expenseList.filter(
         (item) => item.createdAt !== data.createdAt
+      );
+      localStorage.setItem("expense-list", JSON.stringify(updatedList));
+      return {
+        ...state,
+        expenseList: updatedList,
+      };
+    }
+    case EDIT_EXPENSE: {
+      const { data } = action;
+      const updatedList = state.expenseList.map((item) =>
+        item.createdAt === data.createdAt ? data : item
       );
       localStorage.setItem("expense-list", JSON.stringify(updatedList));
       return {

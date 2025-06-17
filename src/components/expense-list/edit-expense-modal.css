@@ -1,0 +1,107 @@
+.edit-expense-modal {
+  color: #001f3f;
+}
+
+.edit-expense-modal h2 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.edit-expense-modal .form-item {
+  margin: 12px 0px;
+  width: 100%;
+  padding: 4px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.edit-expense-modal .form-item label {
+  background-color: lightgrey;
+  padding: 2px 12px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+.edit-expense-modal .form-item input {
+  font-size: 16px;
+  border: none;
+  width: 70%;
+  outline: none;
+  padding: 8px;
+}
+
+.edit-expense-modal .category {
+  position: relative;
+  width: 100%;
+}
+
+.edit-expense-modal .category-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.edit-expense-modal .category-container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.edit-expense-modal .category-item {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-expense-modal .category-item:hover {
+  background-color: rgba(113, 204, 202, 0.1);
+}
+
+.edit-expense-modal .category-item img {
+  height: 32px;
+  margin-right: 12px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-button {
+  padding: 8px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-button.cancel {
+  background-color: #f8f9fa;
+  color: #001f3f;
+}
+
+.modal-button.cancel:hover {
+  background-color: #e9ecef;
+}
+
+.modal-button.save {
+  background-color: #71ccca;
+  color: white;
+}
+
+.modal-button.save:hover {
+  background-color: #5eb8b6;
+}
