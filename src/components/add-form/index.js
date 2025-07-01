@@ -15,9 +15,11 @@ const AddForm = () => {
   const [category, setCategory] = useState();
   const dispatch = useDispatch();
   const [modalOpen, setModalOpen] = useState(false);
+
   const handleTitle = (e) => {
     setTitle(e.target.value);
   };
+
   const handleAmount = (e) => {
     const val = parseFloat(e.target.value);
     if (isNaN(val)) {
@@ -26,10 +28,10 @@ const AddForm = () => {
     }
     setAmount(val);
   };
+
   const handleCategory = (category) => {
     setCategory(category);
     setCategoryOpen(false);
-    console.log(category);
   };
 
   const handleSubmit = () => {
@@ -50,7 +52,7 @@ const AddForm = () => {
 
   return (
     <div className="add-form">
-      <SuccessModal modalOpen={modalOpen} />
+      <SuccessModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <ToastContainer
         position="bottom-left"
         autoClose={1500}
@@ -82,7 +84,7 @@ const AddForm = () => {
             onClick={() => setCategoryOpen(!categoryOpen)}
           >
             <label>{category ? category.title : "Category"}</label>
-            <i class="fi-rr-angle-down"></i>
+            <i className="fi-rr-angle-down"></i>
           </div>
           {categoryOpen && (
             <div className="category-container">
@@ -104,7 +106,7 @@ const AddForm = () => {
       <div className="form-add-button">
         <div onClick={handleSubmit}>
           <label>Add</label>
-          <i class="fi-rr-paper-plane"></i>
+          <i className="fi-rr-paper-plane"></i>
         </div>
       </div>
     </div>

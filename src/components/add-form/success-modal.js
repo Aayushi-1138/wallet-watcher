@@ -1,9 +1,11 @@
 import React from "react";
 import Modal from "react-modal";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./success-modal.css";
 
 const SuccessModal = ({ modalOpen, setModalOpen }) => {
+  const navigate = useNavigate();
+
   const customStyles = {
     overlay: {
       backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -20,6 +22,11 @@ const SuccessModal = ({ modalOpen, setModalOpen }) => {
     },
   };
 
+  const handleHomeClick = () => {
+    setModalOpen(false);
+    navigate("/");
+  };
+
   return (
     <Modal isOpen={modalOpen} style={customStyles}>
       <div className="modal-inner">
@@ -29,12 +36,10 @@ const SuccessModal = ({ modalOpen, setModalOpen }) => {
           alt="Expense Added"
           className="added-image"
         />
-        <Link to="/">
-          <div className="take-home-button">
-            <i className="fi-rr-home"></i>
-            Home
-          </div>
-        </Link>
+        <div className="take-home-button" onClick={handleHomeClick}>
+          <i className="fi-rr-home"></i>
+          Home
+        </div>
       </div>
     </Modal>
   );
