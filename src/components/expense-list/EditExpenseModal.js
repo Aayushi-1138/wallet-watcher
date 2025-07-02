@@ -134,7 +134,7 @@ const EditExpenseModal = ({ expense, modalOpen, setModalOpen }) => {
                     onClick={() => handleCategory(cat)}
                   >
                     <label>{cat.title}</label>
-                    <img src={cat.icon.default} alt={cat.title} />
+                    <img src={cat.icon} alt={cat.title} />
                   </div>
                 ))}
               </div>

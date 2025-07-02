@@ -1,6 +1,6 @@
 import React from "react";
 import "./header.css";
-import watcherImage from "../../assets/images/watcher.png";
+import watcherLogo from "../../assets/images/watcher.png";
 
 const Header = () => {
   return (
@@ -10,7 +10,7 @@ const Header = () => {
           className="header-logo"
           style={{ textAlign: "left", fontWeight: "bold" }}
         >
-          <img src={watcherImage} alt="watcher" className="watcher-logo" />
+          <img src={watcherLogo} alt="watcher" className="watcher-logo" />
           Wallet Watcher
           <i className="fi-rr-credit-card" />
         </div>

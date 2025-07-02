@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { toast, ToastContainer } from "react-toastify";
 import Card from "./card";
 import ExpenseChart from "./ExpenseChart";
+import emptyImage from "../../assets/images/empty.png";
 import "./expense-list.css";
 
 const ExpenseList = () => {
@@ -44,11 +45,7 @@ const ExpenseList = () => {
         </div>
       ) : (
         <div className="empty-state">
-          <img
-            src={require("../../assets/images/empty.png").default}
-            alt="No Expenses"
-            className="empty-image"
-          />
+          <img src={emptyImage} alt="No Expenses" className="empty-image" />
           <label>Uh Oh! Your expense list is empty.</label>
         </div>
       )}

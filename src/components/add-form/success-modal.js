@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import { useNavigate } from "react-router-dom";
+import addedImage from "../../assets/images/added-image.png";
 import "./success-modal.css";
 
 const SuccessModal = ({ modalOpen, setModalOpen }) => {
@@ -31,11 +32,7 @@ const SuccessModal = ({ modalOpen, setModalOpen }) => {
     <Modal isOpen={modalOpen} style={customStyles}>
       <div className="modal-inner">
         <label>Expense Added Successfully!</label>
-        <img
-          src={require("../../assets/images/added-image.png").default}
-          alt="Expense Added"
-          className="added-image"
-        />
+        <img src={addedImage} alt="Expense Added" className="added-image" />
         <div className="take-home-button" onClick={handleHomeClick}>
           <i className="fi-rr-home"></i>
           Home

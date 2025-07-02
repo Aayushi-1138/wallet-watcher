@@ -23,7 +23,7 @@ const Card = ({ item, notifySuccess }) => {
       >
         <div className="card-image-container">
           <img
-            src={item.category.icon.default}
+            src={item.category.icon}
             alt={item.category.title}
             className="card-image"
           />

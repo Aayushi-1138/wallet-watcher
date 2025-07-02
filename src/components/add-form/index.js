@@ -96,7 +96,7 @@ const AddForm = () => {
                   onClick={() => handleCategory(category)}
                 >
                   <label>{category.title}</label>
-                  <img src={category.icon.default} alt={category.title} />
+                  <img src={category.icon} alt={category.title} />
                 </div>
               ))}
             </div>
